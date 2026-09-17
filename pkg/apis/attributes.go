@@ -23,6 +23,8 @@ const (
 	// of confusion and problems.
 	AttrPrefix = "dra.net"
 
+	// TODO: Re-evaluate whether all attributes are needed.
+
 	// AttrInterfaceName is the kernel network interface name. Absent for
 	// IB-only devices, which have no netdev.
 	AttrInterfaceName = AttrPrefix + "/" + "ifName"
