@@ -60,13 +60,14 @@ const (
 	AttrIPv4 = AttrPrefix + "/" + "ipv4"
 	// AttrIPv6 is the IPv6 equivalent of AttrIPv4.
 	AttrIPv6 = AttrPrefix + "/" + "ipv6"
-	// AttrTCFilterNames is a comma-separated list of attached tc filter
-	// names. Absent if none are attached.
+	// AttrTCFilterNames is a comma-separated list of detected ingress/egress
+	// tc BPF filter names. Absent if no such filters are detected.
 	AttrTCFilterNames = AttrPrefix + "/" + "tcFilterNames"
 	// AttrTCXProgramNames is a comma-separated list of attached tcx
 	// program names. Absent if none are attached.
 	AttrTCXProgramNames = AttrPrefix + "/" + "tcxProgramNames"
-	// AttrEBPF is true if any tc filter or tcx program is attached.
+	// AttrEBPF is true if an ingress/egress tc BPF filter or TCX program
+	// is detected on the interface.
 	AttrEBPF = AttrPrefix + "/" + "ebpf"
 	// AttrSRIOV is true if the PF supports SR-IOV (sriov_totalvfs > 0),
 	// regardless of whether any VFs are currently provisioned.
